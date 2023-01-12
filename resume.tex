@@ -1,39 +1,117 @@
-% !TEX program = xelatex
+% Welcome to the simple Undergraduate Complexity Research CV-resume template!
+% Please delete any sections that do not apply to your past experiences. We do not expect that applicants will have itmes for all of the sections included here. You can also rename or revise sections to best fit with your personal accomplishments.
 
-\documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+\usepackage{baskervillef}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\setlength{\footskip}{10pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{0.0in}
+\addtolength{\evensidemargin}{0.0in}
+\addtolength{\textwidth}{0.0in}
+\addtolength{\topmargin}{0.2in}
+\addtolength{\textheight}{0.0in}
+
+
+\urlstyle{same}
+
+%\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \it\vspace{3pt}
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-10pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
 
-\name{Alex Chen}
 
-\basicInfo{
-  \email{windmark2012@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 159-8490-0213} \textperiodcentered\ 
+\begin{center}
+    {\LARGE Alex Chen} \\ \vspace{0pt}
+    \begin{multicols}{2}
+    \begin{flushleft}
+    \large{Email: windmark2012@gmail.com} \\
+    \large{Phone: (+86) 159-8490-0213} \\
+    \large{Wechat: flashback313} \\
+    \end{flushleft}
+    \end{multicols}
+\end{center}
 
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Sichuan Normal University(SICNU)}, Chengdu, China}{2008 -- 2012}
-\textit{B.S.} in Electronics Engineering (EE)
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{Pionex.} Singapore}{2021.4 -- 2022.11}
-\role{Senior Developer}
-\begin{itemize}
+%-----------EDUCATION-----------
+% Please list your current institution first and then past schools in reverse chronology. No need for GPA, etc. You do not need to include high school but may do so if there are accomplishments you would like to highlight.
+\section{Education}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Sichuan Normal University(SICNU)}{2008 -- 2012}
+        {bachelor degree}{Chengdu, China}
+
+\resumeSubHeadingListEnd
+
+
+\section{Experience}
+\resumeSubheading{\textbf{Pionex.}}
+    {2021.4 -- 2022.11}
+  \role{Senior Developer}
+  \begin{itemize}
   \item Build UI components base on [antd]{https://ant.design/}
   \item Encapsulation a trade lib for web(react) and app(react native)
   \item Keeping our application and libraries updated and using best development practices
 \end{itemize}
-
-\datedsubsection{\textbf{Beisen Corp.(the largest Chinese HR SaaS)}}{2020.3 -- 2021.4}
+\resumeSubheading{\textbf{Beisen Corp.(the largest Chinese HR SaaS)}}{2020.3 -- 2021.4}
 \role{Senior Developer}
 \begin{itemize}
   \item Make a router for thunderpage platform(beisen internal platform) for upgrade development experience
   \item Build a chrome extension as FE tools(include CI/CD trigger)
 \end{itemize}
 
-\datedsubsection{\textbf{leanwork.(Forex Trading SaaS)}}{2017.3 -- 2020.3}
+\resumeSubheading{\textbf{leanwork.(Forex Trading SaaS)}}{2017.3 -- 2020.3}
 \role{Senior Developer}
 \begin{itemize}
   \item Keeping our application and libraries updated and using best development practices
@@ -41,7 +119,7 @@
   \item Build UI components lib base on react-components
 \end{itemize}
 
-\datedsubsection{\textbf{Jumei(NYSE: JMEI)}}{2015.3 -- 2017.10}
+\resumeSubheading{\textbf{Jumei(NYSE: JMEI)}}{2015.3 -- 2017.10}
 \role{Team Leader}
 \begin{itemize}
   \item Debug and fix online bug
@@ -51,26 +129,19 @@
   \item Work closely with product owners, designers & other engineering teams to roll out new features and improve existing ones
 \end{itemize}
 
-\datedsubsection{\textbf{[Tours4fun]{https://www.tours4fun.com/}}}{2012.8 -- 2017.10}
+\resumeSubheading{\textbf{Tours4fun}}{2012.8 -- 2017.10}
 \role{Junior Developer}
 \begin{itemize}
   \item Build Tours4fun App (ionic, angular.js,cordova)
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ Skills}
+\section{Skills}
 \begin{itemize}[parsep=0.5ex]
   \item Expert with: HTML,CSS,JavaScript(React.js)
   \item Experience in these technologies: Node.js,Golang,Hybrid App,Chrome Extonsion
 \end{itemize}
 
-\section{\faInfo\ Miscellaneous}
+\section{Miscellaneous}
 \begin{itemize}[parsep=0.5ex]
   \item Blog: https://segmentfault.com/blog/flashback
   \item GitHub: https://github.com/flashback313
@@ -81,3 +152,4 @@
 %\bibliographystyle{IEEETran}
 %\bibliography{mycite}
 \end{document}
+
